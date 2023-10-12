@@ -1,9 +1,15 @@
-<script setup>
-</script>
-
 <template>
-  <div>Hello World</div>
+  <HomePage />
 </template>
 
-<style scoped>
-</style>
+<script>
+import HomePage from "./views/Home.vue";
+
+export default {
+  name: "App",
+  components: { HomePage },
+  data() {},
+};
+</script>
+
+<style scoped></style>
