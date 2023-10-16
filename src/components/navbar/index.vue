@@ -1,29 +1,102 @@
 <template>
   <nav class="bg-gray-900">
-    <div class="flex justify-center p-4">
-      <ul class="flex">
-        <li class="ml-5 mr-5">
-          <RouterLink to="/" class="block py-2 pl-3 pr-4 text-white"
-            >Home</RouterLink
+    <div class="p-4 max-w-md mx-auto">
+      <ul class="flex justify-around">
+        <li class="inline-block w-[33%] text-center">
+          <RouterLink
+            to="/"
+            class="block py-2 pl-3 pr-4 text-white"
+            @mouseover.stop="setUnderlinePosition('home')"
+            @mouseleave.stop="setUnderlinePosition('current')"
           >
+            Home
+          </RouterLink>
         </li>
-        <li class="ml-5 mr-5">
-          <RouterLink to="/project" class="block py-2 pl-3 pr-4 text-white"
-            >Projects</RouterLink
+        <li class="inline-block w-[33%] text-center">
+          <RouterLink
+            to="/project"
+            class="block py-2 pl-3 pr-4 text-white"
+            @mouseover.stop="setUnderlinePosition('projects')"
+            @mouseleave.stop="setUnderlinePosition('current')"
           >
+            Projects
+          </RouterLink>
         </li>
-        <li class="ml-5 mr-5">
-          <RouterLink to="/about" class="block py-2 pl-3 pr-4 text-white"
-            >About</RouterLink
+        <li class="inline-block w-[33%] text-center">
+          <RouterLink
+            to="/about"
+            class="block py-2 pl-3 pr-4 text-white"
+            @mouseover.stop="setUnderlinePosition('about')"
+            @mouseleave.stop="setUnderlinePosition('current')"
           >
+            About
+          </RouterLink>
         </li>
       </ul>
+      <hr
+        id="sliding-underline"
+        :class="{
+          'underline-pos-1': underlinePosition === 'home',
+          'underline-pos-2':
+            underlinePosition === 'projects' ||
+            underlinePosition === 'projectDetails',
+          'underline-pos-3': underlinePosition === 'about',
+        }"
+      />
     </div>
   </nav>
 </template>
 
 <script>
-export default {};
+import { ref, computed, watch } from "vue";
+import { useRoute } from "vue-router";
+
+export default {
+  setup() {
+    const route = useRoute();
+    const currentRoute = computed(() => route.name);
+    let underlinePosition = ref(route.name);
+
+    const setUnderlinePosition = (page) => {
+      if (page === "current") {
+        underlinePosition.value = currentRoute.value;
+      } else {
+        underlinePosition.value = page;
+      }
+    };
+
+    watch(currentRoute, () => {
+      console.log(currentRoute.value);
+      setUnderlinePosition(currentRoute.value);
+    });
+
+    return { underlinePosition, setUnderlinePosition };
+  },
+};
 </script>
 
-<style></style>
+<style>
+a {
+  transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#sliding-underline {
+  margin: 0;
+  background: white;
+  border-radius: 3px;
+  border: none;
+  transition: margin 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  height: 2px;
+  width: 33%;
+}
+
+.underline-pos-1 {
+  margin-left: 0 !important;
+}
+.underline-pos-2 {
+  margin-left: 33% !important;
+}
+.underline-pos-3 {
+  margin-left: 66% !important;
+}
+</style>
