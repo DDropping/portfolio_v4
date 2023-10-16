@@ -1,17 +1,14 @@
 <template>
-  <div>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/project/1">Project</RouterLink>
-  </div>
+  <Navbar />
   <RouterView />
 </template>
 
 <script>
-import HomePage from "./views/Home.vue";
+import Navbar from "./components/navbar/index.vue";
 
 export default {
   name: "App",
-  components: { HomePage },
+  components: { Navbar },
   data() {},
 };
 </script>
