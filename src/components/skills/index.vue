@@ -1,7 +1,6 @@
 <template>
   <div class="flex justify-center mt-20">
-    <div class="mr-10">Profile photo</div>
-    <div>About summary</div>
+    <div>Skills List</div>
   </div>
 </template>
 <script>
