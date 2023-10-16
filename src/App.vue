@@ -1,5 +1,9 @@
 <template>
-  <HomePage />
+  <div>
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/project/1">Project</RouterLink>
+  </div>
+  <RouterView />
 </template>
 
 <script>
