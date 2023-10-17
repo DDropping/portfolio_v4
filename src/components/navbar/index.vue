@@ -1,6 +1,6 @@
 <template>
   <nav class="bg-gray-900 flex pr-[80px]">
-    <div class="w-12 mx-4 flex justify-center items-center cursor-pointer">
+    <div class="w-12 ml-6 mr-2 flex justify-center items-center cursor-pointer">
       <RouterLink to="/">
         <img src="../../assets//logo.png" />
       </RouterLink>
