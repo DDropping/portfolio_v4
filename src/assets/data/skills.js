@@ -34,8 +34,8 @@ const skills = {
   languages: [
     { id: 1, name: "typescript", imgSrc: ts },
     { id: 2, name: "javascript", imgSrc: js },
-    { id: 3, name: "html", imgSrc: html },
     { id: 4, name: "python", imgSrc: python },
+    { id: 3, name: "html", imgSrc: html },
     { id: 5, name: "css", imgSrc: css },
     { id: 6, name: "c++", imgSrc: cpp },
     { id: 7, name: "java", imgSrc: java },
