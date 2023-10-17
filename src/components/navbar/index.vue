@@ -1,6 +1,11 @@
 <template>
-  <nav class="bg-gray-900">
-    <div class="p-4 max-w-md mx-auto">
+  <nav class="bg-gray-900 flex pr-[80px]">
+    <div class="w-12 mx-4 flex justify-center items-center cursor-pointer">
+      <RouterLink to="/">
+        <img src="../../assets//logo.png" />
+      </RouterLink>
+    </div>
+    <div class="p-4 max-w-md w-full mx-auto">
       <ul class="flex justify-around">
         <li class="inline-block w-[33%] text-center">
           <RouterLink
