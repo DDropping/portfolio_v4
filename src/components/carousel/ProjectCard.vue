@@ -1,15 +1,13 @@
 <template>
   <div
-    class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+    class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
   >
     <img :src="data.imgSrc" class="rounded-t-lg" />
     <div class="p-5">
-      <h5
-        class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-      >
+      <h5 class="mb-2 font-bold text-lg">
         {{ data.name }}
       </h5>
-      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+      <p class="mb-3 text-sm font-normal">
         {{ data.description }}
       </p>
       <a
@@ -20,7 +18,6 @@
         <svg
           class="w-3.5 h-3.5 ml-2"
           aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 14 10"
         >
@@ -41,4 +38,4 @@ export default {
   props: ["data"],
 };
 </script>
-<style></style>
+<style module></style>
