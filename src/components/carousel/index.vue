@@ -20,17 +20,7 @@
     :pagination="true"
     :navigation="true"
     :modules="modules"
-    :on-progress="
-      function (s, progress) {
-        for (var a = 0; a < s.slides.length; a++) {
-          var slide = s.slides.eq(a);
-          var slideProgress = slide[0].progress;
-          var slideOpacity = 2 - Math.abs(slideProgress);
-          slideOpacity = Math.min(Math.max(slideOpacity, 0), 1);
-          slide[0].style.opacity = slideOpacity;
-        }
-      }
-    "
+    :watch-slides-progress="true"
     class="max-w-7xl"
     @mouseover="pauseAutoplay"
     @mouseleave="resumeAutoplay"
@@ -73,6 +63,7 @@ function getRef(swiperInstance) {
 function pauseAutoplay() {
   swiper.value.autoplay.stop();
 }
+
 function resumeAutoplay() {
   swiper.value.autoplay.start();
 }
@@ -95,7 +86,7 @@ export default {
 };
 </script>
 
-<style>
+<style module>
 .swiper {
   width: 100%;
   padding-top: 50px;
@@ -110,5 +101,15 @@ export default {
 .swiper-slide img {
   display: block;
   width: 100%;
+}
+
+.swiper-slide {
+  /* opacity: 0;
+  transition: opacity 2s linear; */
+}
+
+.swiper-slide-visible {
+  /* opacity: 1;
+  transition: opacity 2s linear; */
 }
 </style>
