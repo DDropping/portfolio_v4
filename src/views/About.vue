@@ -1,7 +1,18 @@
-<template lang="">
-  <div>About</div>
+<template>
+  <div>
+    <AboutPreview />
+
+    <div>Work Experience</div>
+  </div>
 </template>
+
 <script>
-export default {};
+import AboutPreview from "../components/aboutPreview/index.vue";
+
+export default {
+  components: { AboutPreview },
+  setup() {},
+};
 </script>
-<style lang=""></style>
+
+<style></style>
