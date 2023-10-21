@@ -26,7 +26,7 @@
     @mouseleave="resumeAutoplay"
     @swiper="getRef"
   >
-    <swiper-slide v-for="project in ProjectData" :key="project.name">
+    <swiper-slide v-for="project in projectsList" :key="project.name">
       <ProjectCard :data="project" />
     </swiper-slide>
   </swiper>
@@ -55,6 +55,8 @@ import {
 import ProjectData from "../../assets/data/projects";
 import ProjectCard from "./ProjectCard.vue";
 
+const projectsList = [...ProjectData, ...ProjectData];
+
 const swiper = ref(null);
 function getRef(swiperInstance) {
   swiper.value = swiperInstance;
@@ -77,7 +79,7 @@ export default {
   setup() {
     return {
       modules: [EffectCoverflow, Pagination, Navigation, Autoplay],
-      ProjectData,
+      projectsList,
       pauseAutoplay,
       resumeAutoplay,
       getRef,

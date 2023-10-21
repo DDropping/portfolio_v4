@@ -6,7 +6,7 @@
     :loop="true"
     class="w-[320px]"
   >
-    <swiper-slide v-for="project in ProjectData" :key="project.name">
+    <swiper-slide v-for="project in projectsList" :key="project.name">
       <ProjectCard :data="project" />
     </swiper-slide>
   </swiper>
@@ -25,6 +25,8 @@ import { EffectCards } from "swiper/modules";
 import ProjectCard from "../carousel/ProjectCard.vue";
 import ProjectData from "../../assets/data/projects";
 
+const projectsList = [...ProjectData, ...ProjectData];
+
 export default {
   components: {
     Swiper,
@@ -34,7 +36,7 @@ export default {
   setup() {
     return {
       modules: [EffectCards],
-      ProjectData,
+      projectsList,
     };
   },
 };
