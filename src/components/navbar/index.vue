@@ -1,55 +1,60 @@
 <template>
-  <nav class="bg-gray-900 flex pr-[80px]">
-    <div class="w-12 ml-6 mr-2 flex justify-center items-center cursor-pointer">
-      <RouterLink to="/">
-        <img src="../../assets//logo.png" />
-      </RouterLink>
-    </div>
-    <div class="p-4 max-w-md w-full mx-auto">
-      <ul class="flex justify-around">
-        <li class="inline-block w-[33%] text-center">
-          <RouterLink
-            to="/"
-            class="block py-2 pl-3 pr-4 text-white"
-            @mouseover.stop="setUnderlinePosition('home')"
-            @mouseleave.stop="setUnderlinePosition('current')"
-          >
-            Home
-          </RouterLink>
-        </li>
-        <li class="inline-block w-[33%] text-center">
-          <RouterLink
-            to="/project"
-            class="block py-2 pl-3 pr-4 text-white"
-            @mouseover.stop="setUnderlinePosition('projects')"
-            @mouseleave.stop="setUnderlinePosition('current')"
-          >
-            Projects
-          </RouterLink>
-        </li>
-        <li class="inline-block w-[33%] text-center">
-          <RouterLink
-            to="/about"
-            class="block py-2 pl-3 pr-4 text-white"
-            @mouseover.stop="setUnderlinePosition('about')"
-            @mouseleave.stop="setUnderlinePosition('current')"
-          >
-            About
-          </RouterLink>
-        </li>
-      </ul>
-      <hr
-        id="sliding-underline"
-        :class="{
-          'underline-pos-1': underlinePosition === 'home',
-          'underline-pos-2':
-            underlinePosition === 'projects' ||
-            underlinePosition === 'projectDetails',
-          'underline-pos-3': underlinePosition === 'about',
-        }"
-      />
-    </div>
-  </nav>
+  <div class="sticky">
+    <nav class="flex pr-[80px] bg-gray-800">
+      <div
+        class="w-12 ml-6 mr-2 flex justify-center items-center cursor-pointer"
+      >
+        <RouterLink to="/">
+          <img src="../../assets//logo.png" />
+        </RouterLink>
+      </div>
+      <div class="p-4 max-w-md w-full mx-auto">
+        <ul class="flex justify-around">
+          <li class="inline-block w-[33%] text-center">
+            <RouterLink
+              to="/"
+              class="block py-2 pl-3 pr-4 text-white"
+              @mouseover.stop="setUnderlinePosition('home')"
+              @mouseleave.stop="setUnderlinePosition('current')"
+            >
+              Home
+            </RouterLink>
+          </li>
+          <li class="inline-block w-[33%] text-center">
+            <RouterLink
+              to="/project"
+              class="block py-2 pl-3 pr-4 text-white"
+              @mouseover.stop="setUnderlinePosition('projects')"
+              @mouseleave.stop="setUnderlinePosition('current')"
+            >
+              Projects
+            </RouterLink>
+          </li>
+          <li class="inline-block w-[33%] text-center">
+            <RouterLink
+              to="/about"
+              class="block py-2 pl-3 pr-4 text-white"
+              @mouseover.stop="setUnderlinePosition('about')"
+              @mouseleave.stop="setUnderlinePosition('current')"
+            >
+              About
+            </RouterLink>
+          </li>
+        </ul>
+        <hr
+          id="sliding-underline"
+          :class="{
+            'underline-pos-1': underlinePosition === 'home',
+            'underline-pos-2':
+              underlinePosition === 'projects' ||
+              underlinePosition === 'projectDetails',
+            'underline-pos-3': underlinePosition === 'about',
+          }"
+        />
+      </div>
+    </nav>
+    <div class="gradient w-screen h-[120px]"></div>
+  </div>
 </template>
 
 <script>
@@ -103,5 +108,15 @@ a {
 }
 .underline-pos-3 {
   margin-left: 66% !important;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.gradient {
+  background-image: linear-gradient(to top, rgba(255, 0, 0, 0), #1f2937);
 }
 </style>

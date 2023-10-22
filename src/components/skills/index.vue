@@ -1,6 +1,5 @@
 <template>
   <div class="mt-20">
-    <div class="text-center text-xl">Some of my favorite technologies are</div>
     <ul class="flex justify-center items-center flex-wrap">
       <li
         v-for="skill in skillsList.languages"

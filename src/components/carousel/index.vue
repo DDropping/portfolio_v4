@@ -3,7 +3,14 @@
     :effect="'coverflow'"
     :grab-cursor="true"
     :centered-slides="true"
-    :slides-per-view="'3'"
+    :breakpoints="{
+      '640': {
+        slidesPerView: 3,
+      },
+      '1024': {
+        slidesPerView: 4,
+      },
+    }"
     :loop="true"
     :autoplay="{
       delay: 1000,
@@ -17,11 +24,8 @@
       modifier: 1,
       slideShadows: true,
     }"
-    :pagination="true"
-    :navigation="true"
     :modules="modules"
     :watch-slides-progress="true"
-    class="max-w-7xl"
     @mouseover="pauseAutoplay"
     @mouseleave="resumeAutoplay"
     @swiper="getRef"

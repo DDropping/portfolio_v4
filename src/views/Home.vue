@@ -1,8 +1,10 @@
 <template>
-  <div class="px-10">
-    <AboutPreview />
+  <div>
     <div>
-      <h2 class="text-center text-2xl mt-10">Recent Projects</h2>
+      <AboutPreview />
+    </div>
+    <div>
+      <h2 class="text-center text-2xl mt-[120px] mb-10">Recent Projects</h2>
       <div class="hidden md:block">
         <ProjectsCarousel />
       </div>
@@ -10,6 +12,9 @@
         <ProjectsCardStack />
       </div>
     </div>
+    <h2 class="text-center text-2xl mt-[120px] mb-10">
+      Some of my favorite technologies
+    </h2>
     <SkillsList />
   </div>
 </template>

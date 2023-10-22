@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center items-center mt-20">
+  <div class="flex justify-center items-center">
     <div class="w-[325px] min-w-[200px] mr-10">
       <img src="../../assets/profile.png" />
     </div>
@@ -10,18 +10,18 @@
       all things web, building and deploying production ready applicaitons, and
       having a blast while doing so. If you'd like to learn a bit more about me,
       here's a couple options! Head over to my
-      <RouterLink to="/about" class="text-sky-800 underline">about</RouterLink>
+      <RouterLink to="/about" class="text-gray-300 underline">about</RouterLink>
       page, find me on
       <a
         href="https://www.linkedin.com/in/ddropping/"
-        class="text-sky-800 underline"
+        class="text-gray-300 underline"
         target="_blank"
         rel="noopener noreferrer"
         >LinkedIn</a
       >, or take a peek at my
       <a
         href="https://drive.google.com/file/d/1TtAcsu0IU7fEZHAyVs5rVi_gvWs0SmLY/view?usp=sharing"
-        class="text-sky-800 underline"
+        class="text-gray-300 underline"
         target="_blank"
         rel="noopener noreferrer"
         >resume</a
