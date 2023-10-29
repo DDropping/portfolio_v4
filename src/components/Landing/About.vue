@@ -3,47 +3,64 @@
     <TitleHeader title="About Me" />
 
     <div :class="$style.overlay">
-      <p :class="[{ [$style.about]: isExpanded }]">
-        Hey there! If you'd like to learn a little about me, let me sum it up
-        with the three things I love. Traveling, being outdoors, and building
-        things that live on the internet.
-      </p>
-      <button
+      <div
         :class="[
-          { [$style.visible]: !isExpanded, [$style.hidden]: isExpanded },
-        ]"
-        @click="toggleExpanded"
-      >
-        Show More >
-      </button>
-      <p
-        :class="[
-          { [$style.visible]: isExpanded, [$style.hidden]: !isExpanded },
+          {
+            [$style.sectionPreview]: !isExpanded,
+            [$style.section]: isExpanded,
+          },
         ]"
       >
-        I could go on and on about the first two but lets key in on the latter.
-        My interest in software engineering and web development started back in
-        2018 when I picked up my first book on html and css. Little did I know
-        that would strike the beginning of a life long passion.
-      </p>
-      <p
-        :class="[
-          { [$style.visible]: isExpanded, [$style.hidden]: !isExpanded },
-        ]"
-      >
-        Fast-forward to today, and I've had the privilege of working at a
-        start-up turned large corporation for the past few years; honing my
-        skills in designing, architecting, and developing digital experiences
-        that make people's lives easier.
-      </p>
-      <button
-        :class="[
-          { [$style.visible]: isExpanded, [$style.hidden]: !isExpanded },
-        ]"
-        @click="toggleExpanded"
-      >
-        Show Less &lt;
-      </button>
+        <p
+          :class="[
+            {
+              [$style.aboutPreview]: !isExpanded,
+              [$style.about]: isExpanded,
+            },
+          ]"
+        >
+          Hey there! I'm David, and if you'd like to learn a little about me,
+          let me sum it up with three things I love: traveling, the outdoors,
+          and building things that live on the internet.
+        </p>
+        <button
+          :class="[
+            { [$style.visible]: !isExpanded, [$style.hidden]: isExpanded },
+          ]"
+          @click="toggleExpanded"
+        >
+          Show More >
+        </button>
+        <p
+          :class="[
+            { [$style.visible]: isExpanded, [$style.hidden]: !isExpanded },
+          ]"
+        >
+          I could go on and on about the first two but lets key in on the
+          latter. My interest in software engineering and web development
+          started back in 2018 when I picked up my first book on html and css.
+          Little did I know that would strike the beginning of a life long
+          passion.
+        </p>
+        <p
+          :class="[
+            { [$style.visible]: isExpanded, [$style.hidden]: !isExpanded },
+          ]"
+        >
+          Fast-forward to today, and I've had the privilege of working at a
+          start-up turned large corporation for the past few years; honing my
+          skills in designing, architecting, and developing digital experiences
+          that make people's lives easier.
+        </p>
+        <button
+          :class="[
+            { [$style.visible]: isExpanded, [$style.hidden]: !isExpanded },
+          ]"
+          @click="toggleExpanded"
+        >
+          Show Less &lt;
+        </button>
+      </div>
     </div>
   </section>
 </template>
@@ -79,6 +96,15 @@ export default {
 
 .overlay {
   z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.sectionPreview {
+  width: 1000px;
+}
+
+.section {
 }
 
 .visible {
@@ -94,8 +120,13 @@ export default {
   text-align: center;
 }
 
-.about {
+.aboutPreview {
   font-size: 30px;
+  transition-duration: 300ms;
+  z-index: 10;
+}
+
+.about {
   transition-duration: 300ms;
   z-index: 10;
 }
