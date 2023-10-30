@@ -29,7 +29,7 @@
           ]"
           @click="toggleExpanded"
         >
-          Show More >
+          Show More
         </button>
         <p
           :class="[
@@ -58,7 +58,7 @@
           ]"
           @click="toggleExpanded"
         >
-          Show Less &lt;
+          Show Less
         </button>
       </div>
     </div>
