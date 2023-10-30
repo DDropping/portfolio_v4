@@ -85,7 +85,7 @@ export default {
     SlidingButton,
   },
   setup() {
-    const isExpanded = ref(true);
+    const isExpanded = ref(false);
     const toggleExpanded = () => {
       isExpanded.value = !isExpanded.value;
     };
