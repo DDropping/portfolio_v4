@@ -13,6 +13,6 @@ export default {
   font-family: "Yellowtail", cursive;
   font-size: 160px;
   position: absolute;
-  color: #bababa;
+  color: #cccccc;
 }
 </style>

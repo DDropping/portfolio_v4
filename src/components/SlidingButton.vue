@@ -22,7 +22,7 @@ export default {};
 }
 
 .content {
-  padding: 5px;
+  padding: 5px 10px;
 }
 
 .slidingBackground {
