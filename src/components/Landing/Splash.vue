@@ -14,8 +14,8 @@ export default {};
 <style module>
 @import url("https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap");
 .container {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;

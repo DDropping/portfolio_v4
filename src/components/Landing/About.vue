@@ -98,8 +98,8 @@ export default {
 <style module>
 .container {
   position: relative;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
 }
@@ -127,11 +127,11 @@ export default {
 
 .expandedContent {
   display: flex;
-  align-items: center;
 }
 
 .profile {
-  max-width: 250px;
+  max-width: 300px;
+  padding: 20px;
   width: 100%;
 }
 

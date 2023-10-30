@@ -64,8 +64,7 @@ export default {
 <style module>
 .container {
   position: relative;
-  height: 100vh;
-  width: 100vw;
+  min-width: 100vw;
 }
 
 .content {
