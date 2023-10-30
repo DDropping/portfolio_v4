@@ -1,0 +1,37 @@
+<template>
+  <button>
+    <div :class="$style.container">
+      <div :class="$style.slidingBackground"></div>
+      <div :class="$style.content"><slot></slot></div>
+    </div>
+  </button>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style module>
+.container {
+  display: inline-block;
+  position: relative;
+}
+
+.container:hover .slidingBackground {
+  width: 100%;
+}
+
+.content {
+  padding: 5px;
+}
+
+.slidingBackground {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background-color: #fff;
+  width: 30px;
+  height: 40px;
+  transition-duration: 300ms;
+}
+</style>

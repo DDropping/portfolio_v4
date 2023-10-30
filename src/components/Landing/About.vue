@@ -21,16 +21,16 @@
         >
           Hey there! I'm David, and if you'd like to learn a little about me,
           let me sum it up with three things I love: traveling, the outdoors,
-          and building things that live on the internet.
+          and building things that live on the internet...
         </p>
-        <button
+        <SlidingButton
           :class="[
             { [$style.visible]: !isExpanded, [$style.hidden]: isExpanded },
           ]"
           @click="toggleExpanded"
         >
           Show More
-        </button>
+        </SlidingButton>
         <p
           :class="[
             { [$style.visible]: isExpanded, [$style.hidden]: !isExpanded },
@@ -52,14 +52,14 @@
           skills in designing, architecting, and developing digital experiences
           that make people's lives easier.
         </p>
-        <button
+        <SlidingButton
           :class="[
             { [$style.visible]: isExpanded, [$style.hidden]: !isExpanded },
           ]"
           @click="toggleExpanded"
         >
           Show Less
-        </button>
+        </SlidingButton>
       </div>
     </div>
   </section>
@@ -67,11 +67,13 @@
 
 <script>
 import TitleHeader from "./Header.vue";
+import SlidingButton from "../SlidingButton.vue";
 import { ref } from "vue";
 
 export default {
   components: {
     TitleHeader,
+    SlidingButton,
   },
   setup() {
     const isExpanded = ref(false);
