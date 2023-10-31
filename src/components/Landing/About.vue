@@ -1,6 +1,7 @@
 <template>
   <section :class="$style.container">
-    <TitleHeader title="About Me" />
+    <TitleHeader title="About" />
+
     <div :class="$style.content">
       <p :class="$style.aboutPreview">
         Hey there! I'm David, and if you'd like to learn a little about me, let
