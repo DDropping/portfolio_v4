@@ -28,7 +28,7 @@
         building things that live on the internet.
       </p>
       <SlidingButton v-if="!isExpanded" @click="toggleExpanded">
-        Show More
+        Show More <img :src="arrowDown" width="16" class="inline-block mb-1" />
       </SlidingButton>
 
       <div
@@ -96,7 +96,10 @@
             </div>
           </div>
           <br />
-          <SlidingButton @click="toggleExpanded"> Show Less </SlidingButton>
+          <SlidingButton @click="toggleExpanded">
+            Show Less
+            <img :src="arrowUp" width="12" class="inline-block mb-1 ml-1"
+          /></SlidingButton>
         </div>
 
         <div
@@ -133,6 +136,8 @@
 import TitleHeader from "./Header.vue";
 import SlidingButton from "../SlidingButton.vue";
 import { ref } from "vue";
+import arrowUp from "../../assets/icons/arrow-up.png";
+import arrowDown from "../../assets/icons/arrow-down.png";
 
 export default {
   components: {
@@ -145,7 +150,7 @@ export default {
       isExpanded.value = !isExpanded.value;
     };
 
-    return { isExpanded, toggleExpanded };
+    return { isExpanded, arrowUp, arrowDown, toggleExpanded };
   },
 };
 </script>
