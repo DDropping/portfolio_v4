@@ -1,14 +1,23 @@
 <template>
   <button>
     <div :class="$style.container">
-      <div :class="$style.slidingBackground"></div>
+      <div
+        :class="[
+          {
+            [$style.slidingBackground]: true,
+            [$style.green]: color === 'green',
+          },
+        ]"
+      ></div>
       <div :class="$style.content"><slot></slot></div>
     </div>
   </button>
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["color"],
+};
 </script>
 
 <style module>
@@ -33,5 +42,10 @@ export default {};
   width: 30px;
   height: 40px;
   transition-duration: 300ms;
+}
+
+.green {
+  background-color: #48ed45;
+  width: 100%;
 }
 </style>
