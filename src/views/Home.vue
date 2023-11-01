@@ -3,6 +3,7 @@
     <div>
       <AboutPreview />
     </div>
+
     <div>
       <h2 class="text-center text-2xl mt-[120px] mb-10">Recent Projects</h2>
       <div class="hidden md:block">
@@ -12,10 +13,13 @@
         <ProjectsCardStack />
       </div>
     </div>
-    <h2 class="text-center text-2xl mt-[120px] mb-10">
-      Some of my favorite technologies
-    </h2>
-    <SkillsList />
+
+    <div>
+      <h2 class="text-center text-2xl mt-[120px] mb-10">
+        Some of my favorite technologies
+      </h2>
+      <SkillsList />
+    </div>
   </div>
 </template>
 
@@ -27,7 +31,12 @@ import SkillsList from "../components/skills/index.vue";
 
 export default {
   name: "App",
-  components: { AboutPreview, ProjectsCarousel, SkillsList, ProjectsCardStack },
+  components: {
+    AboutPreview,
+    ProjectsCarousel,
+    SkillsList,
+    ProjectsCardStack,
+  },
   data() {},
 };
 </script>

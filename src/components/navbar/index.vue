@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky">
+  <div class="sticky z-10">
     <nav class="flex pr-[80px] bg-gray-800">
       <div
         class="w-12 ml-6 mr-2 flex justify-center items-center cursor-pointer"
@@ -76,7 +76,6 @@ export default {
     };
 
     watch(currentRoute, () => {
-      console.log(currentRoute.value);
       setUnderlinePosition(currentRoute.value);
     });
 

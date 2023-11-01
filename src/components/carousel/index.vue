@@ -26,6 +26,7 @@
     }"
     :modules="modules"
     :watch-slides-progress="true"
+    class="z-[11]"
     @mouseover="pauseAutoplay"
     @mouseleave="resumeAutoplay"
     @swiper="getRef"
