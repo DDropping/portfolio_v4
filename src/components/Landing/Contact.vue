@@ -1,8 +1,27 @@
 <template>
   <section :class="$style.container">
-    <TitleHeader title="Contact" />
+    <div class="overflow-x-hidden">
+      <TitleHeader title="Contact" />
+    </div>
 
-    <div :class="$style.content">
+    <div
+      v-motion
+      :initial="{
+        opacity: 0,
+        transition: {
+          stiffness: 100,
+        },
+      }"
+      :visible="{
+        opacity: 1,
+        transition: {
+          stiffness: 100,
+          ease: 'easeInOut',
+        },
+      }"
+      :delay="400"
+      :class="$style.content"
+    >
       <div :class="$style.contactContainer">
         <ContactForm />
       </div>

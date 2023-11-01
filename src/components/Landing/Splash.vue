@@ -1,8 +1,48 @@
 <template>
   <section :class="$style.container">
     <div>
-      <h1 :class="$style.name" v-motion-fade>David Dropping</h1>
-      <h2 :class="$style.slogan" v-motion-fade :delay="1000">
+      <h1
+        :class="$style.name"
+        v-motion
+        :initial="{
+          x: -100,
+          opacity: 0,
+          transition: {
+            stiffness: 100,
+          },
+        }"
+        :enter="{
+          x: 0,
+          opacity: 1,
+          transition: {
+            stiffness: 100,
+            ease: 'easeInOut',
+          },
+        }"
+        :delay="200"
+      >
+        David Dropping
+      </h1>
+      <h2
+        :class="$style.slogan"
+        v-motion
+        :initial="{
+          x: -100,
+          opacity: 0,
+          transition: {
+            stiffness: 100,
+          },
+        }"
+        :enter="{
+          x: 0,
+          opacity: 1,
+          transition: {
+            stiffness: 100,
+            ease: 'easeInOut',
+          },
+        }"
+        :delay="800"
+      >
         I build things for the web.
       </h2>
     </div>
