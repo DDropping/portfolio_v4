@@ -1,8 +1,27 @@
 <template>
   <section :class="$style.container">
-    <TitleHeader title="Projects" class="mt-[20vh]" />
+    <div class="overflow-x-hidden">
+      <TitleHeader title="Projects" :class="$style.title" />
+    </div>
 
-    <div :class="$style.content">
+    <div
+      :class="$style.content"
+      v-motion
+      :initial="{
+        opacity: 0,
+        transition: {
+          stiffness: 100,
+        },
+      }"
+      :visible="{
+        opacity: 1,
+        transition: {
+          stiffness: 100,
+          ease: 'easeInOut',
+        },
+      }"
+      :delay="400"
+    >
       <BoardRackv2 />
     </div>
 
@@ -44,5 +63,9 @@ export default {
   position: relative;
   z-index: 10;
   display: flex;
+}
+
+.title {
+  margin-top: 20vh;
 }
 </style>

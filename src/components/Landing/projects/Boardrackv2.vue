@@ -65,8 +65,8 @@
 import img1 from "../../../assets/images/boardrackv2/boardrackv2-home.png";
 import img2 from "../../../assets/images/boardrackv2/boardrackv2-message.png";
 import img3 from "../../../assets/images/boardrackv2/boardrackv2-post.png";
-import img4 from "../../../assets/images/boardrackv2/boardrackv2-account.png";
-import img5 from "../../../assets/images/boardrackv2/boardrackv2-createpost.png";
+import img4 from "../../../assets/images/boardrackv2/boardrackv2-createpost.png";
+import img5 from "../../../assets/images/boardrackv2/boardrackv2-account.png";
 import multiDeviceImage from "../../../assets/images/project-boardrackv2.png";
 
 export default {

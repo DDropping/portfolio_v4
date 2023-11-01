@@ -1,7 +1,5 @@
 <template>
-  <div class="overflow-x-hidden">
-    <h1 :id="title" :class="$style.header">{{ title }}</h1>
-  </div>
+  <h1 :id="title" :class="$style.header">{{ title }}</h1>
 </template>
 
 <script>

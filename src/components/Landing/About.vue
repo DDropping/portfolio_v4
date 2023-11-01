@@ -1,19 +1,33 @@
 <template>
   <section :class="$style.container">
-    <TitleHeader title="About" />
+    <div class="overflow-x-hidden">
+      <TitleHeader title="About" />
+    </div>
 
-    <div :class="$style.content">
+    <div
+      :class="$style.content"
+      v-motion
+      :initial="{
+        opacity: 0,
+        transition: {
+          stiffness: 100,
+        },
+      }"
+      :visible="{
+        opacity: 1,
+        transition: {
+          stiffness: 100,
+          ease: 'easeInOut',
+        },
+      }"
+      :delay="400"
+    >
       <p :class="$style.aboutPreview">
         Hey there! I'm David, and if you'd like to learn a little about me, let
         me sum it up with three things I love: traveling, the outdoors, and
         building things that live on the internet.
       </p>
-      <SlidingButton
-        :class="[
-          { [$style.visible]: !isExpanded, [$style.hidden]: isExpanded },
-        ]"
-        @click="toggleExpanded"
-      >
+      <SlidingButton v-if="!isExpanded" @click="toggleExpanded">
         Show More
       </SlidingButton>
 
@@ -25,7 +39,22 @@
           },
         ]"
       >
-        <div>
+        <div
+          v-motion
+          :initial="{
+            opacity: 0,
+            transition: {
+              stiffness: 100,
+            },
+          }"
+          :visible="{
+            opacity: 1,
+            transition: {
+              stiffness: 100,
+              ease: 'easeInOut',
+            },
+          }"
+        >
           <div :class="$style.profileSm">
             <img src="../../assets/profile.png" />
           </div>
@@ -70,7 +99,29 @@
           <SlidingButton @click="toggleExpanded"> Show Less </SlidingButton>
         </div>
 
-        <div :class="$style.profile">
+        <div
+          :class="$style.profile"
+          v-motion
+          :initial="{
+            opacity: 0,
+            transition: {
+              stiffness: 100,
+            },
+          }"
+          :visible="{
+            opacity: 1,
+            transition: {
+              stiffness: 100,
+              ease: 'easeInOut',
+            },
+          }"
+          :leave="{
+            opacity: 0,
+            transition: {
+              stiffness: 100,
+            },
+          }"
+        >
           <img src="../../assets/profile.png" />
         </div>
       </div>
