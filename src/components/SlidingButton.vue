@@ -46,7 +46,7 @@ export default {
 }
 
 .green {
-  background-color: #48ed45;
+  background-color: rgb(5 255 38 / 60%);
   width: 100%;
 }
 </style>
