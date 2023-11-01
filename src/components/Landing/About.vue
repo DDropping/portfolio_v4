@@ -26,7 +26,10 @@
         ]"
       >
         <div>
-          <br />
+          <div :class="$style.profileSm">
+            <img src="../../assets/profile.png" />
+          </div>
+
           <p>
             I could go on and on about the first two but lets key in on the
             latter. My interest in software engineering and web development
@@ -108,9 +111,11 @@ export default {
 .content {
   position: relative;
   z-index: 10;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding-top: 140px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .visible {
@@ -125,21 +130,36 @@ export default {
   font-size: 30px;
   transition-duration: 300ms;
   z-index: 10;
+  margin-bottom: 20px;
 }
 
-.expandedContent {
-  display: flex;
-}
-
-.profile {
+.profileSm {
   max-width: 300px;
   padding: 20px;
   width: 100%;
+  margin: 0 auto;
+}
+
+.profile {
+  display: none;
 }
 
 .gridLayout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-left: 20px;
+}
+@media screen and (min-width: 800px) {
+  .expandedContent {
+    display: flex;
+  }
+
+  .profileSm {
+    display: none;
+  }
+
+  .profile {
+    display: block;
+  }
 }
 </style>

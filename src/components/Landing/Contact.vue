@@ -64,37 +64,23 @@ export default {
 </script>
 
 <style module>
-.container {
-  position: relative;
-  min-width: 100vw;
-}
-
 .content {
-  position: relative;
-  z-index: 10;
   padding-top: 140px;
-  max-width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-}
-
-.contactContainer {
-  max-width: 500px;
-  width: 100%;
-  z-index: 10;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .socialsContainer {
-  max-width: 400px;
   width: 100%;
   z-index: 10;
   font-size: 20px;
+  margin-top: 50px;
 }
 
 .socialIcon {
   cursor: pointer;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .socialIcon > a > img {
@@ -111,5 +97,39 @@ export default {
 
 .socialIcon > a {
   color: #6b7280;
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    position: relative;
+    min-width: 100vw;
+  }
+
+  .content {
+    position: relative;
+    z-index: 10;
+    padding-top: 140px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .contactContainer {
+    max-width: 500px;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .socialIcon {
+    cursor: pointer;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+  .socialsContainer {
+    max-width: 400px;
+    margin-top: 0;
+  }
 }
 </style>
