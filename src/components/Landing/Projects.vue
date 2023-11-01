@@ -72,7 +72,16 @@
         To view the full portfolio of my work, visit my GitHub by clicking the
         link below
       </p>
-      <SlidingButton @click="handleShowMore"> Visit Github </SlidingButton>
+      <br />
+      <SlidingButton>
+        <a
+          href="https://github.com/DDropping"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Github
+        </a>
+      </SlidingButton>
     </div>
   </section>
 </template>
@@ -114,6 +123,12 @@ export default {
 }
 
 .title {
-  margin-top: 20vh;
+  margin-top: 16vh;
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    margin-top: 0;
+  }
 }
 </style>
