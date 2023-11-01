@@ -46,7 +46,7 @@
         </div>
 
         <div :class="$style.multiDeviceImage">
-          <img :src="multiDeviceImage" id="img2" />
+          <img :src="multiDeviceImage" />
         </div>
 
         <div :class="$style.parallaxImages">
