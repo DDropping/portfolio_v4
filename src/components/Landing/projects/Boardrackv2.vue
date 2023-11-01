@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.sticky_parent">
-    <div id="sticky" :class="$style.sticky">
+    <div id="sticky-boardrackv2" :class="$style.sticky">
       <div :class="$style.wrapper">
         <div :class="$style.projectDescription">
           <div>
@@ -42,6 +42,37 @@
                 </grid>
               </ul>
             </div>
+
+            <br />
+
+            <SlidingButton class="mr-14">
+              <a
+                href="https://boardrack.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Website
+                <img
+                  :src="externalLinkIcon"
+                  width="16"
+                  class="inline-block mb-1"
+                />
+              </a>
+            </SlidingButton>
+            <SlidingButton>
+              <a
+                href="https://github.com/DDropping/BoardRack_v2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Repository
+                <img
+                  :src="externalLinkIcon"
+                  width="16"
+                  class="inline-block mb-1"
+                />
+              </a>
+            </SlidingButton>
           </div>
         </div>
 
@@ -50,11 +81,36 @@
         </div>
 
         <div :class="$style.parallaxImages">
-          <img :src="img2" width="700" id="img2" :class="$style.img2" />
-          <img :src="img4" width="500" id="img4" :class="$style.img4" />
-          <img :src="img5" width="400" id="img5" :class="$style.img5" />
-          <img :src="img1" width="700" id="img1" :class="$style.img1" />
-          <img :src="img3" width="650" id="img3" :class="$style.img3" />
+          <img
+            :src="img2"
+            width="700"
+            id="img2-boardrackv2"
+            :class="$style.img2"
+          />
+          <img
+            :src="img4"
+            width="500"
+            id="img4-boardrackv2"
+            :class="$style.img4"
+          />
+          <img
+            :src="img5"
+            width="400"
+            id="img5-boardrackv2"
+            :class="$style.img5"
+          />
+          <img
+            :src="img1"
+            width="700"
+            id="img1-boardrackv2"
+            :class="$style.img1"
+          />
+          <img
+            :src="img3"
+            width="650"
+            id="img3-boardrackv2"
+            :class="$style.img3"
+          />
         </div>
       </div>
     </div>
@@ -68,13 +124,24 @@ import img3 from "../../../assets/images/boardrackv2/boardrackv2-post.png";
 import img4 from "../../../assets/images/boardrackv2/boardrackv2-createpost.png";
 import img5 from "../../../assets/images/boardrackv2/boardrackv2-account.png";
 import multiDeviceImage from "../../../assets/images/project-boardrackv2.png";
+import SlidingButton from "../../SlidingButton.vue";
+import externalLinkIcon from "../../../assets/icons/link.png";
 
 export default {
-  components: {},
+  components: { SlidingButton },
   setup() {
     const handleShowMore = () => {};
 
-    return { img1, img2, img3, img4, img5, multiDeviceImage, handleShowMore };
+    return {
+      img1,
+      img2,
+      img3,
+      img4,
+      img5,
+      multiDeviceImage,
+      handleShowMore,
+      externalLinkIcon,
+    };
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);
@@ -84,24 +151,24 @@ export default {
   },
   methods: {
     handleScroll(event) {
-      var element = document.getElementById("sticky");
+      var element = document.getElementById("sticky-boardrackv2");
       console.log(
         "value here",
         element.offsetTop - document.documentElement.scrollTop
       );
 
-      var element = document.getElementById("sticky");
+      var element = document.getElementById("sticky-boardrackv2");
       var a = element.getBoundingClientRect().top;
       if (a === 0) {
-        this.updateElementPosition("img1", 0.8);
-        this.updateElementPosition("img2", 0.6);
-        this.updateElementPosition("img3", 1);
-        this.updateElementPosition("img4", 1);
-        this.updateElementPosition("img5", 0.8);
+        this.updateElementPosition("img1-boardrackv2", 0.8);
+        this.updateElementPosition("img2-boardrackv2", 0.6);
+        this.updateElementPosition("img3-boardrackv2", 1);
+        this.updateElementPosition("img4-boardrackv2", 1);
+        this.updateElementPosition("img5-boardrackv2", 0.8);
       }
     },
     updateElementPosition(id, speed) {
-      var stickyElement = document.getElementById("sticky");
+      var stickyElement = document.getElementById("sticky-boardrackv2");
       var element = document.getElementById(id);
       const offset =
         stickyElement.offsetTop - document.documentElement.scrollTop;
