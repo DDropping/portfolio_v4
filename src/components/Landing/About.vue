@@ -99,13 +99,14 @@ export default {
 <style module>
 .container {
   position: relative;
-  min-height: 100vh;
+  min-height: 700px;
   min-width: 100vw;
   display: flex;
   flex-direction: column;
 }
 
 .content {
+  position: relative;
   z-index: 10;
   max-width: 1000px;
   margin: 0 auto;

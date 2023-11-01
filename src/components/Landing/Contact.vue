@@ -1,10 +1,12 @@
 <template>
-  <div :class="$style.container">
+  <section :class="$style.container">
     <TitleHeader title="Contact" />
+
     <div :class="$style.content">
       <div :class="$style.contactContainer">
         <ContactForm />
       </div>
+
       <div :class="$style.socialsContainer">
         <ul>
           <li :class="$style.socialIcon">
@@ -36,7 +38,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -68,6 +70,8 @@ export default {
 }
 
 .content {
+  position: relative;
+  z-index: 10;
   padding-top: 140px;
   max-width: 1000px;
   margin: 0 auto;
