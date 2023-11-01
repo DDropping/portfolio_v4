@@ -46,10 +46,33 @@
       <SortVis />
     </div>
 
-    <div class="flex justify-center relative z-10 mb-[200px]">
-      <SlidingButton @click="handleShowMore">
-        Show More Projects
-      </SlidingButton>
+    <div
+      :class="$style.content"
+      v-motion
+      :initial="{
+        opacity: 0,
+        transition: {
+          stiffness: 100,
+        },
+      }"
+      :visible="{
+        opacity: 1,
+        transition: {
+          stiffness: 100,
+          ease: 'easeInOut',
+        },
+      }"
+      :delay="400"
+    >
+      <SamsDesigns />
+    </div>
+
+    <div class="flex flex-col justify-center relative z-10 mb-[200px]">
+      <p class="text-center">
+        To view the full portfolio of my work, visit my GitHub by clicking the
+        link below
+      </p>
+      <SlidingButton @click="handleShowMore"> Visit Github </SlidingButton>
     </div>
   </section>
 </template>
@@ -59,6 +82,7 @@ import TitleHeader from "./Header.vue";
 import SlidingButton from "../SlidingButton.vue";
 import BoardRackv2 from "./projects/Boardrackv2.vue";
 import SortVis from "./projects/SortVis.vue";
+import SamsDesigns from "./projects/SamsDesigns.vue";
 
 export default {
   components: {
@@ -66,6 +90,7 @@ export default {
     SlidingButton,
     BoardRackv2,
     SortVis,
+    SamsDesigns,
   },
   setup() {
     const handleShowMore = () => {};
