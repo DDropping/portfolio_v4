@@ -29,7 +29,6 @@
         <img :src="skill.imgSrc" />
       </li>
     </ul>
-    {{ console.log(counter) }}
   </div>
 </template>
 

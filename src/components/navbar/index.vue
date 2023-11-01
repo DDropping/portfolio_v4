@@ -76,7 +76,6 @@ export default {
     };
 
     watch(currentRoute, () => {
-      console.log(currentRoute.value);
       setUnderlinePosition(currentRoute.value);
     });
 
