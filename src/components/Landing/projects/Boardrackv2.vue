@@ -162,7 +162,7 @@ export default {
   }
 
   .projectDescription {
-    margin-left: 100px;
+    margin: 0 0 0 100px;
     width: 800px;
     height: 100vh;
     display: flex;
