@@ -148,6 +148,8 @@ export default {
     const isExpanded = ref(false);
     const toggleExpanded = () => {
       isExpanded.value = !isExpanded.value;
+      const event = new Event("mouseLeaveClickableElement");
+      window.dispatchEvent(event);
     };
 
     return { isExpanded, arrowUp, arrowDown, toggleExpanded };
