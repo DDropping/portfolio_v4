@@ -152,10 +152,6 @@ export default {
   methods: {
     handleScroll(event) {
       var element = document.getElementById("sticky-boardrackv2");
-      console.log(
-        "value here",
-        element.offsetTop - document.documentElement.scrollTop
-      );
 
       var element = document.getElementById("sticky-boardrackv2");
       var a = element.getBoundingClientRect().top;
@@ -175,7 +171,6 @@ export default {
 
       var scrollDistance = document.documentElement.scrollTop;
       const value = (scrollDistance + offset) * speed;
-      console.log("value", value);
 
       element.style.transform = "translateY(-" + value + "px)";
     },
