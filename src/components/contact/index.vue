@@ -56,7 +56,6 @@ export default {
     };
 
     const handleSubmit = () => {
-      console.log(name.value, contactInfo.value, message.value);
       messageSent.value = true;
       clearForm();
       setTimeout(() => {

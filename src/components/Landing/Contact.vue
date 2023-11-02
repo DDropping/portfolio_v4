@@ -28,7 +28,11 @@
 
       <div :class="$style.socialsContainer">
         <ul>
-          <li :class="$style.socialIcon">
+          <li
+            :class="$style.socialIcon"
+            @mouseover="handleMouseOver"
+            @mouseleave="handleMouseLeave"
+          >
             <a
               href="https://github.com/ddropping"
               target="_blank"
@@ -38,7 +42,11 @@
               /ddropping
             </a>
           </li>
-          <li :class="$style.socialIcon">
+          <li
+            :class="$style.socialIcon"
+            @mouseover="handleMouseOver"
+            @mouseleave="handleMouseLeave"
+          >
             <a
               href="https://www.linkedin.com/in/ddropping/"
               target="_blank"
@@ -48,7 +56,11 @@
               /ddropping
             </a>
           </li>
-          <li :class="$style.socialIcon">
+          <li
+            :class="$style.socialIcon"
+            @mouseover="handleMouseOver"
+            @mouseleave="handleMouseLeave"
+          >
             <a href="mailto:ddropping@gmail.com" target="_blank" rel="noopener">
               <img :src="emailIcon" width="70" :class="$style.whiteIcon" />
               ddropping@gmail.com
@@ -78,6 +90,16 @@ export default {
       linkedinIcon,
       emailIcon,
     };
+  },
+  methods: {
+    handleMouseOver: function (e) {
+      const event = new Event("mouseOverClickableElement");
+      window.dispatchEvent(event);
+    },
+    handleMouseLeave: function (e) {
+      const event = new Event("mouseLeaveClickableElement");
+      window.dispatchEvent(event);
+    },
   },
 };
 </script>
