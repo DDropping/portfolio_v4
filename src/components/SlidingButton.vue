@@ -1,5 +1,5 @@
 <template>
-  <button @mouseOver="handleMouseOver" @mouseleave="handleMouseLeave">
+  <button @mouseover="handleMouseOver" @mouseleave="handleMouseLeave">
     <div :class="$style.container">
       <div
         :class="[
@@ -18,12 +18,11 @@
 export default {
   props: ["color"],
   methods: {
-    handleMouseOver(e) {
-      console.log("here");
+    handleMouseOver: function (e) {
       const event = new Event("mouseOverClickableElement");
       window.dispatchEvent(event);
     },
-    handleMouseLeave(e) {
+    handleMouseLeave: function (e) {
       const event = new Event("mouseLeaveClickableElement");
       window.dispatchEvent(event);
     },
