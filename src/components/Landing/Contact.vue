@@ -1,7 +1,7 @@
 <template>
   <section :class="$style.container">
     <div class="overflow-x-hidden">
-      <TitleHeader title="Contact" />
+      <TitleHeader title="Contact" id="contactHeader" />
     </div>
 
     <div

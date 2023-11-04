@@ -1,10 +1,10 @@
 <template>
-  <h1 :id="title" :class="$style.header">{{ title }}</h1>
+  <h1 :id="id" :class="$style.header">{{ title }}</h1>
 </template>
 
 <script>
 export default {
-  props: ["title"],
+  props: ["title", "id"],
   created() {
     window.addEventListener("scroll", this.handleScroll);
   },
@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     handleScroll(event) {
-      var element = document.getElementById(this.title);
+      var element = document.getElementById(this.id);
       var a = element.getBoundingClientRect().top;
 
       var value = -a * 0.2 + 100;
