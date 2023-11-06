@@ -20,7 +20,7 @@
           ease: 'easeInOut',
         },
       }"
-      :delay="400"
+      :delay="200"
     >
       <BoardRackv2 />
     </div>
@@ -41,7 +41,7 @@
           ease: 'easeInOut',
         },
       }"
-      :delay="400"
+      :delay="200"
     >
       <SortVis />
     </div>
@@ -62,7 +62,7 @@
           ease: 'easeInOut',
         },
       }"
-      :delay="400"
+      :delay="200"
     >
       <SamsDesigns />
     </div>

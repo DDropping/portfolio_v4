@@ -20,7 +20,7 @@
           ease: 'easeInOut',
         },
       }"
-      :delay="400"
+      :delay="200"
     >
       <p :class="$style.aboutPreview">
         Hey there! I'm David, and if you'd like to learn a little about me, let

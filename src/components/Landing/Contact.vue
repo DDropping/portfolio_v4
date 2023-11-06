@@ -19,7 +19,7 @@
           ease: 'easeInOut',
         },
       }"
-      :delay="400"
+      :delay="200"
       :class="$style.content"
     >
       <div :class="$style.contactContainer">
