@@ -1,27 +1,10 @@
 <template>
   <section :class="$style.container">
     <div class="overflow-x-hidden">
-      <TitleHeader title="Contact" />
+      <TitleHeader title="Contact" id="contactHeader" />
     </div>
 
-    <div
-      v-motion
-      :initial="{
-        opacity: 0,
-        transition: {
-          stiffness: 100,
-        },
-      }"
-      :visible="{
-        opacity: 1,
-        transition: {
-          stiffness: 100,
-          ease: 'easeInOut',
-        },
-      }"
-      :delay="400"
-      :class="$style.content"
-    >
+    <FadeInTransition :class="$style.content">
       <div :class="$style.contactContainer">
         <ContactForm />
       </div>
@@ -68,7 +51,7 @@
           </li>
         </ul>
       </div>
-    </div>
+    </FadeInTransition>
   </section>
 </template>
 
@@ -78,11 +61,13 @@ import ContactForm from "../contact/index.vue";
 import githubIcon from "../../assets/icons/github.png";
 import linkedinIcon from "../../assets/icons/linkedin.png";
 import emailIcon from "../../assets/icons/email.png";
+import FadeInTransition from "../FadeInTransition.vue";
 
 export default {
   components: {
     TitleHeader,
     ContactForm,
+    FadeInTransition,
   },
   setup() {
     return {

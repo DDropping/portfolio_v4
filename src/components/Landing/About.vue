@@ -1,27 +1,10 @@
 <template>
   <section :class="$style.container">
     <div class="overflow-x-hidden">
-      <TitleHeader title="About" />
+      <TitleHeader title="About Me" id="aboutHeader" />
     </div>
 
-    <div
-      :class="$style.content"
-      v-motion
-      :initial="{
-        opacity: 0,
-        transition: {
-          stiffness: 100,
-        },
-      }"
-      :visible="{
-        opacity: 1,
-        transition: {
-          stiffness: 100,
-          ease: 'easeInOut',
-        },
-      }"
-      :delay="400"
-    >
+    <FadeInTransition :class="$style.content">
       <p :class="$style.aboutPreview">
         Hey there! I'm David, and if you'd like to learn a little about me, let
         me sum it up with three things I love: traveling, the outdoors, and
@@ -128,7 +111,7 @@
           <img src="../../assets/profile.png" />
         </div>
       </div>
-    </div>
+    </FadeInTransition>
   </section>
 </template>
 
@@ -138,11 +121,13 @@ import SlidingButton from "../SlidingButton.vue";
 import { ref } from "vue";
 import arrowUp from "../../assets/icons/arrow-up.png";
 import arrowDown from "../../assets/icons/arrow-down.png";
+import FadeInTransition from "../FadeInTransition.vue";
 
 export default {
   components: {
     TitleHeader,
     SlidingButton,
+    FadeInTransition,
   },
   setup() {
     const isExpanded = ref(false);
