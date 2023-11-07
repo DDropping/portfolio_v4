@@ -42,4 +42,8 @@ export default {
 
 .description {
 }
+
+.description > p {
+  margin-top: 14px;
+}
 </style>
