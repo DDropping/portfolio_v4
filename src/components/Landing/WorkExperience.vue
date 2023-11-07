@@ -60,7 +60,7 @@
 
             <p :class="$style.description">
               As a software engineer at Fetch Robotics, my responsibilities
-              centered around the development and maintenence of our web
+              centered around the development and maintenance of our web
               applications and cloud platform. I took charge of maintaining and
               enhancing features across various React applications, including an
               Electron application integrated with our robotic platform and a
@@ -88,7 +88,7 @@
               As a software engineer at Zebra Technologies, I had the privilege
               of actively contributing across an entire robotics cloud platform.
               As a member of the Applications team, my responsibilities
-              encompassed not only the development and maintenence of our suite
+              encompassed not only the development and maintenance of our suite
               of web applications but also extended to providing support on our
               GoLang and Django back-end services and robotics platform. This
               hands-on experience within the cloud platform empowered me to
