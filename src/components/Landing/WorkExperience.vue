@@ -73,7 +73,7 @@
           <div :class="$style.dashedLine"></div>
 
           <WorkExperienceSection
-            year="Acquired Aug 2021 - Oct 2022"
+            year="Acquired Aug 2021 - Oct 2023"
             company="Zebra Technologies"
             position="Software Engineer"
           >
