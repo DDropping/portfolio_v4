@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="overflow-x-hidden">
+    <div class="overflow-hidden">
       <TitleHeader id="workExperienceSection" title="My Journey" />
 
       <div :class="$style.content">
