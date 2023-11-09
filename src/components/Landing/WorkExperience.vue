@@ -40,6 +40,14 @@
               this project had to be temporarily set aside, but its potential
               remains compelling.
             </p>
+
+            <SlidingButton
+              v-if="expandedState !== 'boardrack'"
+              @click="setExpandedState('boardrack')"
+            >
+              Show More
+              <img :src="arrowDown" width="16" class="inline-block mb-1" />
+            </SlidingButton>
           </WorkExperienceSection>
         </FadeInTransition>
 
@@ -66,6 +74,14 @@
               Electron application integrated with our robotic platform and a
               WebGL 2D mapping application.
             </p>
+
+            <SlidingButton
+              v-if="expandedState !== 'fetch'"
+              @click="setExpandedState('fetch')"
+            >
+              Show More
+              <img :src="arrowDown" width="16" class="inline-block mb-1" />
+            </SlidingButton>
           </WorkExperienceSection>
         </FadeInTransition>
 
@@ -96,6 +112,14 @@
               an indispensable role in controlling and monitoring our
               cutting-edge robotics systems.
             </p>
+
+            <SlidingButton
+              v-if="expandedState !== 'zebra'"
+              @click="setExpandedState('zebra')"
+            >
+              Show More
+              <img :src="arrowDown" width="16" class="inline-block mb-1" />
+            </SlidingButton>
           </WorkExperienceSection>
         </FadeInTransition>
 
@@ -110,17 +134,28 @@
 </template>
 
 <script>
+import { ref } from "vue";
 import TitleHeader from "./Header.vue";
 import WorkExperienceSection from "./WorkExperienceSection.vue";
 import FadeInTransition from "../FadeInTransition.vue";
+import SlidingButton from "../SlidingButton.vue";
+import arrowDown from "../../assets/icons/arrow-down.png";
 
 export default {
   components: {
     TitleHeader,
     WorkExperienceSection,
     FadeInTransition,
+    SlidingButton,
   },
-  setup() {},
+  setup() {
+    const expandedState = ref("");
+    const setExpandedState = (value) => {
+      expandedState.value = value;
+    };
+
+    return { arrowDown, expandedState, setExpandedState };
+  },
 };
 </script>
 
