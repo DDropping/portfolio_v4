@@ -82,6 +82,31 @@
               Show More
               <img :src="arrowDown" width="16" class="inline-block mb-1" />
             </SlidingButton>
+
+            <div v-if="expandedState === 'fetch'">
+              <h2>Role Description</h2>
+              <div>
+                Develop and maintian web applicaitons across a robotics cloud
+                platform.
+              </div>
+              <h2>Key Achievements</h2>
+              <ul>
+                <li>
+                  • Developed and maintained React web applications across a
+                  robotics cloud platform.
+                </li>
+                <li>
+                  • Championed an initiative to enhance developer experience by
+                  migrating our React-based robot tasking application to more
+                  efficient libraries and frameworks.
+                </li>
+                <li>
+                  • Enhanced organizational awareness of critical issues by
+                  leading an initiative to generate daily reports that were
+                  adopted across the organization.
+                </li>
+              </ul>
+            </div>
           </WorkExperienceSection>
         </FadeInTransition>
 
