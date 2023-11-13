@@ -83,12 +83,10 @@
               <img :src="arrowDown" width="16" class="inline-block mb-1" />
             </SlidingButton>
 
-            <div v-if="expandedState === 'fetch'">
-              <h2>Role Description</h2>
-              <div>
-                Develop and maintian web applicaitons across a robotics cloud
-                platform.
-              </div>
+            <div
+              v-if="expandedState === 'fetch'"
+              :class="$style.experienceDetails"
+            >
               <h2>Key Achievements</h2>
               <ul>
                 <li>
@@ -177,6 +175,8 @@ export default {
     const expandedState = ref("");
     const setExpandedState = (value) => {
       expandedState.value = value;
+      const event = new Event("mouseLeaveClickableElement");
+      window.dispatchEvent(event);
     };
 
     return { arrowDown, expandedState, setExpandedState };
@@ -226,5 +226,15 @@ export default {
   align-items: center;
   font-size: 50px;
   margin: 0 auto;
+}
+
+.experienceDetails h2 {
+  padding-top: 16px;
+  font-size: 20px;
+}
+
+.experienceDetails ul {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 </style>
