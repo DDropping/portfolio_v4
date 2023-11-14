@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="overflow-x-hidden relative">
     <div class="overflow-hidden">
       <TitleHeader id="workExperienceSection" title="My Journey" />
 
