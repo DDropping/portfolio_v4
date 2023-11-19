@@ -93,7 +93,7 @@ export default {
 
 .experienceDetails h2 {
   padding-top: 16px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .experienceDetails ul {
