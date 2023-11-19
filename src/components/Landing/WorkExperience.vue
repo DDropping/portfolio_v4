@@ -53,43 +53,7 @@
 
         <FetchRobotics />
 
-        <FadeInTransition>
-          <div :class="$style.dashedLine"></div>
-
-          <WorkExperienceSection
-            year="Acquired Aug 2021 - Oct 2023"
-            company="Zebra Technologies"
-            position="Software Engineer"
-          >
-            <p>
-              <i>
-                Market leader in the development of technology solutions for
-                data capture, mobile computing, printing, and automation.
-              </i>
-            </p>
-
-            <p :class="$style.description">
-              As a software engineer at Zebra Technologies, I had the privilege
-              of actively contributing across an entire robotics cloud platform.
-              As a member of the Applications team, my responsibilities
-              encompassed not only the development and maintenance of our suite
-              of web applications but also extended to providing support on our
-              GoLang and Django back-end services and robotics platform. This
-              hands-on experience within the cloud platform empowered me to
-              architect and develop resilient software applications that played
-              an indispensable role in controlling and monitoring our
-              cutting-edge robotics systems.
-            </p>
-
-            <SlidingButton
-              v-if="expandedState !== 'zebra'"
-              @click="setExpandedState('zebra')"
-            >
-              Show More
-              <img :src="arrowDown" width="16" class="inline-block mb-1" />
-            </SlidingButton>
-          </WorkExperienceSection>
-        </FadeInTransition>
+        <ZebraTechnologies />
 
         <FadeInTransition>
           <div :class="$style.line"></div>
@@ -109,6 +73,7 @@ import FadeInTransition from "../FadeInTransition.vue";
 import SlidingButton from "../SlidingButton.vue";
 import arrowDown from "../../assets/icons/arrow-down.png";
 import FetchRobotics from "./experience/fetchRobotics.vue";
+import ZebraTechnologies from "./experience/ZebraTechnologies.vue";
 
 export default {
   components: {
@@ -117,6 +82,7 @@ export default {
     FadeInTransition,
     SlidingButton,
     FetchRobotics,
+    ZebraTechnologies,
   },
   setup() {
     const expandedState = ref("");
