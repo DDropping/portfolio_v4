@@ -14,42 +14,7 @@
           </WorkExperienceSection>
         </FadeInTransition>
 
-        <FadeInTransition>
-          <div :class="$style.line"></div>
-
-          <WorkExperienceSection
-            year="May 2019 - Feb 2021"
-            company="BoardRack"
-            position="Project"
-          >
-            <p>
-              <i>
-                New/used surfboard marketplace that allows users to buy from,
-                sell to and chat with others locally.
-              </i>
-            </p>
-
-            <p :class="$style.description">
-              What began as a passion project during my time at San Francisco
-              State University soon evolved into a compelling endeavor I was
-              eager to bring to market. The project went through two distinct
-              iterations, initially built with the MERN stack and subsequently
-              transitioned to Next.js and serverless functions. Through these
-              transformations, I created a comprehensive platform designed for
-              the seamless sale and management of surfboards. Unfortunately,
-              this project had to be temporarily set aside, but its potential
-              remains compelling.
-            </p>
-
-            <SlidingButton
-              v-if="expandedState !== 'boardrack'"
-              @click="setExpandedState('boardrack')"
-            >
-              Show More
-              <img :src="arrowDown" width="16" class="inline-block mb-1" />
-            </SlidingButton>
-          </WorkExperienceSection>
-        </FadeInTransition>
+        <Boardrack />
 
         <FetchRobotics />
 
@@ -66,34 +31,23 @@
 </template>
 
 <script>
-import { ref } from "vue";
 import TitleHeader from "./Header.vue";
 import WorkExperienceSection from "./WorkExperienceSection.vue";
 import FadeInTransition from "../FadeInTransition.vue";
-import SlidingButton from "../SlidingButton.vue";
-import arrowDown from "../../assets/icons/arrow-down.png";
 import FetchRobotics from "./experience/fetchRobotics.vue";
 import ZebraTechnologies from "./experience/ZebraTechnologies.vue";
+import Boardrack from "./experience/Boardrack.vue";
 
 export default {
   components: {
     TitleHeader,
     WorkExperienceSection,
     FadeInTransition,
-    SlidingButton,
     FetchRobotics,
     ZebraTechnologies,
+    Boardrack,
   },
-  setup() {
-    const expandedState = ref("");
-    const setExpandedState = (value) => {
-      expandedState.value = value;
-      const event = new Event("mouseLeaveClickableElement");
-      window.dispatchEvent(event);
-    };
-
-    return { arrowDown, expandedState, setExpandedState };
-  },
+  setup() {},
 };
 </script>
 
