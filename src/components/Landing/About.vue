@@ -149,6 +149,7 @@ export default {
   min-width: 100vw;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .content {

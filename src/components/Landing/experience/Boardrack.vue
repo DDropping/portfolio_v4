@@ -3,27 +3,26 @@
     <div :class="$style.line"></div>
 
     <WorkExperienceSection
-      year="Acquired Aug 2021 - Oct 2023"
-      company="Zebra Technologies"
-      position="Software Engineer"
+      year="May 2019 - Feb 2021"
+      company="Boardrack"
+      position="Project"
     >
       <p>
         <i>
-          Market leader in the development of technology solutions for data
-          capture, mobile computing, printing, and automation.
+          New/used surfboard marketplace that allows users to buy from, sell to
+          and chat with others locally.
         </i>
       </p>
 
       <p :class="$style.description">
-        As a software engineer at Zebra Technologies, I had the privilege of
-        actively contributing across an entire robotics cloud platform. As a
-        member of the Applications team, my responsibilities encompassed not
-        only the development and maintenance of our suite of web applications
-        but also extended to providing support on our GoLang and Django back-end
-        services and robotics platform. This hands-on experience within the
-        cloud platform empowered me to architect and develop resilient software
-        applications that played an indispensable role in controlling and
-        monitoring our cutting-edge robotics systems.
+        What began as a passion project during my time at San Francisco State
+        University soon evolved into a compelling endeavor I was eager to bring
+        to market. The project went through two distinct iterations, initially
+        built with the MERN stack and subsequently transitioned to Next.js and
+        serverless functions. Through these transformations, I created a
+        comprehensive platform designed for the seamless sale and management of
+        surfboards. Unfortunately, this project had to be temporarily set aside,
+        but its potential remains compelling.
       </p>
     </WorkExperienceSection>
   </FadeInTransition>
