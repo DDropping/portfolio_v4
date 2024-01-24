@@ -34,7 +34,7 @@
 import TitleHeader from "./Header.vue";
 import WorkExperienceSection from "./WorkExperienceSection.vue";
 import FadeInTransition from "../FadeInTransition.vue";
-import FetchRobotics from "./experience/fetchRobotics.vue";
+import FetchRobotics from "./experience/FetchRobotics.vue";
 import ZebraTechnologies from "./experience/ZebraTechnologies.vue";
 import Boardrack from "./experience/Boardrack.vue";
 
