@@ -20,6 +20,8 @@
 
         <ZebraTechnologies />
 
+        <Clear />
+
         <FadeInTransition>
           <div :class="$style.line"></div>
 
@@ -36,6 +38,7 @@ import WorkExperienceSection from "./WorkExperienceSection.vue";
 import FadeInTransition from "../FadeInTransition.vue";
 import FetchRobotics from "./experience/FetchRobotics.vue";
 import ZebraTechnologies from "./experience/ZebraTechnologies.vue";
+import Clear from "./experience/Clear.vue";
 import Boardrack from "./experience/Boardrack.vue";
 
 export default {
@@ -45,6 +48,7 @@ export default {
     FadeInTransition,
     FetchRobotics,
     ZebraTechnologies,
+    Clear,
     Boardrack,
   },
   setup() {},
